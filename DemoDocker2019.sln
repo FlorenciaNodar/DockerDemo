@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.DemoDocker2019", "Services.DemoDocker2019\Services.DemoDocker2019.csproj", "{F8B09D86-E790-4D8F-B083-F5385007C8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docker2019", "Docker2019\Docker2019.csproj", "{6CD13DAC-B0ED-44DF-8220-A879C2AAC31E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B69EC054-7338-4E95-A5DF-5080F00B8DEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8B09D86-E790-4D8F-B083-F5385007C8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B09D86-E790-4D8F-B083-F5385007C8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B09D86-E790-4D8F-B083-F5385007C8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B09D86-E790-4D8F-B083-F5385007C8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD13DAC-B0ED-44DF-8220-A879C2AAC31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD13DAC-B0ED-44DF-8220-A879C2AAC31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD13DAC-B0ED-44DF-8220-A879C2AAC31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD13DAC-B0ED-44DF-8220-A879C2AAC31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69EC054-7338-4E95-A5DF-5080F00B8DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69EC054-7338-4E95-A5DF-5080F00B8DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69EC054-7338-4E95-A5DF-5080F00B8DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69EC054-7338-4E95-A5DF-5080F00B8DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56CB630D-4FFA-4714-8590-143961872A5D}
+	EndGlobalSection
+EndGlobal

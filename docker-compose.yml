@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  services:
+    image: "servicesdemodocker2019"
+    ports: 
+      - "8060:8060"
+    build:
+      context: .
+      dockerfile: "Services.DemoDocker2019/Dockerfile"
+
+  docker2019:
+    image: "docker2019"
+    ports: 
+      - "8050:8050"
+    build:
+      context: .
+      dockerfile: Docker2019/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://+:8050
+      - "Consumers:Url=http://services"
