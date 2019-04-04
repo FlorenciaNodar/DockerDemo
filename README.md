@@ -5,9 +5,15 @@ Aplicación MVC con docker
 Comandos
 
 docker-compose up -d
+
 docker image rm c60b4aadbdcf
+
 docker container ls
-docker image save identity-dash-qa:1 -o identity-dash-qa.tar
+
+docker image save docker2019:1 -o docker2019.tar
+
 docker image ls
-docker image build . -t web-dash-qa:1
-docker image tag gto-dash-dev:1 gto-dash-qa:1
+
+docker image tag docker2019:1 docker2019:2
+
+docker image build . -t docker2019:1
