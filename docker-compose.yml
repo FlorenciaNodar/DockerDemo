@@ -2,15 +2,18 @@ version: '3.4'
 
 services:
   services:
-    image: "servicesdemodocker2019"
+    image: "servicesdemodocker2019:1"
     ports: 
       - "8060:8060"
     build:
       context: .
       dockerfile: "Services.DemoDocker2019/Dockerfile"
-
+    environment:
+      - ASPNETCORE_URLS=http://+:8060
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "Consumers:Web=http://docker2019:8050"
   docker2019:
-    image: "docker2019"
+    image: "docker2019:1"
     ports: 
       - "8050:8050"
     build:
@@ -18,4 +21,5 @@ services:
       dockerfile: Docker2019/Dockerfile
     environment:
       - ASPNETCORE_URLS=http://+:8050
-      - "Consumers:Url=http://services"
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "Consumers:UrlService=http://services:8060/"

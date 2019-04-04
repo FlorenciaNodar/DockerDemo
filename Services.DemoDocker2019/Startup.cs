@@ -25,7 +25,11 @@ namespace Services.DemoDocker2019
                .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
 
+        }
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -65,6 +69,8 @@ namespace Services.DemoDocker2019
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Active Directory");
             });
+            var webApp = Configuration.GetSection("Consumers").GetValue<string>("Web");
+            app.UseCors(builder => builder.WithOrigins(webApp).AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

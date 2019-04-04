@@ -8,19 +8,27 @@ using Docker2019.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
+using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 
 namespace Docker2019.Controllers
 {
     public class HomeController : Controller
     {
-        
+        IConfiguration _configuration;
+        public HomeController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         public IActionResult Index()
         {
-            string countri="";
+            string servicesUrl = _configuration.GetValue<string>("Consumers:UrlService");
+
+            string countri ="";
             IEnumerable<string> listCountries;
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:55552/");
+            client.BaseAddress = new Uri(servicesUrl);
             // Add an Accept header for JSON format.    
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             // List all Names.    
