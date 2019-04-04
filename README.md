@@ -18,4 +18,4 @@ docker image tag docker2019:1 docker2019:2
 
 docker image build . -t docker2019:1 .
 
-docker container run -d -p 80:80 nginx:1.14.2
+docker container run -d -p 80:80 docker2019:1
